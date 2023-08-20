@@ -11,7 +11,7 @@ if you set your computer to performance mode it wont switch automatically. that'
 
 ## Install
 
-`sh install.sh`
+`sudo sh install.sh`
 
 ## Requirements
 - upower
