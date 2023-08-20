@@ -1,0 +1,9 @@
+[Unit]
+After=power-profiles-daemon.service
+Description=custom battery governor for laptops
+
+[Service]
+ExecStart=/bin/sh -c "sh /opt/batterym/batterservice.sh"
+
+[Install]
+WantedBy=multi-user.target
