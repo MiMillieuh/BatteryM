@@ -21,6 +21,8 @@ Since 1.1, custom scripts can be added and runned by BatteryM :
 
 `/opt/batterym/pluggedincripts/` for script that should be executed while plugged in.
 
+/!\ Scripts must be executable if it isn't you can make it executable with this command : `chmod +x yourfilename` /!\
+
 ## Requirements
 - upower
 - power-profiles-daemon
