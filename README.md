@@ -11,7 +11,7 @@ if you set your computer to performance mode it wont switch automatically. that'
 
 ## Install
 
-`sudo sh install.sh`
+Download BatteryM.zip from release and extract it, then execute `sudo sh install.sh`
 
 ## Custom scripts support
 
