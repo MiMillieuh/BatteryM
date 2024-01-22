@@ -10,7 +10,7 @@ cp systemd/batterym.service /etc/systemd/system/
 cp -r batterym /opt
 
 mkdir -p /opt/batterym/onbatteryscripts
-mkdir -p /opt/batterym/plugedincripts
+mkdir -p /opt/batterym/pluggedincripts
 
 systemctl enable --now batterym.service
 
