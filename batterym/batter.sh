@@ -2,7 +2,7 @@
 
 CURRENTPROFILE=$(powerprofilesctl get)
 BatteryFolder="/opt/batterym/onbatteryscripts"
-PowerFolder="/opt/batterym/onpowerscripts"
+PlugedInFolder="/opt/batterym/plugedincripts"
 StateFile="/opt/batterym/powerstate"
 
 if [[ $CURRENTPROFILE == "performance" ]]; then
@@ -25,7 +25,7 @@ if [[ $POWERSTATE != $PreviousState ]]; then
         powerprofilesctl set balanced
         sudo cpupower frequency-set -g ondemand
 
-        for script in "$BatteryFolder"/*; do
+        for script in "$PlugedInFolder"/*; do
             if [ -x "$script" ]; then
                 echo "Executing $script"
                 "$script"
@@ -39,7 +39,7 @@ if [[ $POWERSTATE != $PreviousState ]]; then
         powerprofilesctl set power-saver
         cpupower frequency-set -g powersave
 
-        for script in "$PowerFolder"/*; do
+        for script in "$BatteryFolder"/*; do
             if [ -x "$script" ]; then
                 echo "Executing $script"
                 "$script"
