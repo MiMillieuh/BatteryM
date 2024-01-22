@@ -9,6 +9,9 @@ cp systemd/batterym.service /etc/systemd/system/
 
 cp -r batterym /opt
 
+mkdir -p /opt/batterym/onbatteryscripts
+mkdir -p /opt/batterym/onpowerscripts
+
 systemctl enable --now batterym.service
 
 echo "batterym install done"
