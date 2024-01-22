@@ -13,6 +13,14 @@ if you set your computer to performance mode it wont switch automatically. that'
 
 `sudo sh install.sh`
 
+## Custom scripts support
+
+Since 1.1, custom scripts can be added and runned by BatteryM :
+
+`/opt/batterym/onbatteryscripts/` for script that should be executed on battery.
+
+`/opt/batterym/pluggedincripts/` for script that should be executed while plugged in.
+
 ## Requirements
 - upower
 - power-profiles-daemon
