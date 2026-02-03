@@ -4,6 +4,7 @@ Description=custom battery governor for laptops
 
 [Service]
 ExecStart=/bin/sh -c "sh /opt/batterym/batterservice.sh"
+ExecStop=/bin/rm /opt/batterym/powerstate
 
 [Install]
 WantedBy=multi-user.target
