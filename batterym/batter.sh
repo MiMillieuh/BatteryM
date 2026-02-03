@@ -20,7 +20,7 @@ fi
 echo "$POWERSTATE" > "$StateFile"
 
 if [[ $POWERSTATE != $PreviousState ]]; then
-    if [[ $POWERSTATE == "charging" || $POWERSTATE == "fully-charged" ]]; then
+    if [[ $POWERSTATE == "charging" || $POWERSTATE == "fully-charged" || $POWERSTATE == "pending-charge" ]]; then
 
         powerprofilesctl set balanced
         sudo cpupower frequency-set -g ondemand
